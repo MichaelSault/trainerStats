@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="TrainerStats">
+        <meta property="og:description" content="A simple stat tracker for pokemon go.">
+        <link rel="stylesheet" type="text/css" href="css/trainerStats.css">
+        <title>A Pokémon GO Medal Tracker</title>
+        <script src = "scripts/trainerStats.js"></script>
+    </head>
+
+    <body>
+        <form action="statSubmit.php" method="post">
+            <table style = "width:100%">
+                
+                <tr><th><h1>Trainer Stats:</h1></th></tr>
+                
+                <tr>
+                    <th><label for="entryDate">DateTime:</label></th>
+                    <th><input type="datetime-local" id="entryDate" name="entryDate"></th>
+                    <th><label for="exp">Total XP:</label></th>
+                    <th><input type="number" id="exp" name="exp"></th>
+                    <th><label for="caught">Pokédex Caught:</label></th>
+                    <th><input type="number" id="caught" name="caught"></th>
+                    <th><label for="seen">Pokédex Seen:</label></th>
+                    <th><input type="number" id="seen" name="seen"></th>
+                </tr>
+
+                <tr><th><br></th></tr>
+                <tr><th><h3>Gameplay Medals:</h3></th></tr>
+                <tr>
+                    <th><label for="jogger">Jogger:</label></th>
+                    <th><input type="number" id="jogger" name="jogger"></th>
+                    <th><label for="kanto">Kanto:</label></th>
+                    <th><input type="number" id="kanto" name="kanto"></th>
+                    <th><label for="collector">Collector:</label></th>
+                    <th><input type="number" id="collector" name="collector"></th>
+                    <th><label for="scientist">Scientist:</label></th>
+                    <th><input type="number" id="scientist" name="scientist"></th>
+                </tr>
+                <tr>
+                    <th><label for="breeder">Breeder:</label></th>
+                    <th><input type="number" id="breeder" name="breeder"></th>
+                    <th><label for="backpacker">Backpacker:</label></th>
+                    <th><input type="number" id="backpacker" name="backpacker"></th>
+                    <th><label for="sightseer">Sightseer:</label></th>
+                    <th><input type="number" id="sightseer" name="sightseer"></th>
+                    <th><label for="fisher">Fisher:</label></th>
+                    <th><input type="number" id="fisher" name="fisher"></th>
+                </tr>
+                <tr>
+                    <th><label for="battleGirl">Battle Girl:</label></th>
+                    <th><input type="number" id="battleGirl" name="battleGirl"></th>
+                    <th><label for="aceTrainer">Ace Trainer:</label></th>
+                    <th><input type="number" id="aceTrainer" name="aceTrainer"></th>
+                    <th><label for="youngster">Youngster:</label></th>
+                    <th><input type="number" id="youngster" name="youngster"></th>
+                    <th><label for="pikachu">Pikachu Fan:</label></th>
+                    <th><input type="number" id="pikachu" name="pikachu"></th>
+                </tr>
+                <tr>
+                    <th><label for="unown">Unown:</label></th>
+                    <th><input type="number" id="unown" name="unown"></th>
+                    <th><label for="johto">Johto:</label></th>
+                    <th><input type="number" id="johto" name="johto"></th>
+                    <th><label for="champion">Champion:</label></th>
+                    <th><input type="number" id="champion" name="champion"></th>
+                    <th><label for="battleLegend">Battle Legend:</label></th>
+                    <th><input type="number" id="battleLegend" name="battleLegend"></th>
+                </tr>
+                <tr>
+                    <th><label for="berryMaster">Berry Master:</label></th>
+                    <th><input type="number" id="berryMaster" name="berryMaster"></th>
+                    <th><label for="gymLeader">Gym Leader:</label></th>
+                    <th><input type="number" id="gymLeader" name="gymLeader"></th>
+                    <th><label for="hoenn">Hoenn:</label></th>
+                    <th><input type="number" id="hoenn" name="hoenn"></th>
+                    <th><label for="ranger">Pokémon Ranger:</label></th>
+                    <th><input type="number" id="ranger" name="ranger"></th>
+                </tr>
+                <tr>
+                    <th><label for="idol">Idol:</label></th>
+                    <th><input type="number" id="idol" name="idol"></th>
+                    <th><label for="gentleman">Gentleman:</label></th>
+                    <th><input type="number" id="gentleman" name="gentleman"></th>
+                    <th><label for="pilot">Pilot:</label></th>
+                    <th><input type="number" id="pilot" name="pilot"></th>
+                    <th><label for="sinnoh">Sinnoh:</label></th>
+                    <th><input type="number" id="sinnoh" name="sinnoh"></th>
+                </tr>
+                <tr>
+                    <th><label for="greatlv">Great League Veteran:</label></th>
+                    <th><input type="number" id="greatlv" name="greatlv"></th>
+                    <th><label for="ultralv">Ultra League Veteran:</label></th>
+                    <th><input type="number" id="ultralv" name="ultralv"></th>
+                    <th><label for="masterlv">Master League Veteran:</label></th>
+                    <th><input type="number" id="masterlv" name="masterlv"></th>
+                    <th><label for="cameraman">Cameraman:</label></th>
+                    <th><input type="number" id="cameraman" name="cameraman"></th>
+                </tr>
+                <tr>
+                    <th><label for="unova">Unova:</label></th>
+                    <th><input type="number" id="unova" name="unova"></th>
+                    <th><label for="purifer">Purifier:</label></th>
+                    <th><input type="number" id="purifer" name="purifer"></th>
+                    <th><label for="hero">Hero:</label></th>
+                    <th><input type="number" id="hero" name="hero"></th>
+                    <th><label for="ultraHero">Ultra Hero:</label></th>
+                    <th><input type="number" id="ultraHero" name="ultraHero"></th>
+                </tr>
+                <tr>
+                    <th><label for="bestbuddy">Best Buddy:</label></th>
+                    <th><input type="number" id="bestbuddy" name="bestbuddy"></th>
+                    <th><label for="wayfarer">Wayfarer:</label></th>
+                    <th><input type="number" id="wayfarer" name="wayfarer"></th>
+                    <th><label for="successor">Successor:</label></th>
+                    <th><input type="number" id="successor" name="successor"></th>
+                    <th><label for="mega">Mega Evolution Guru:</label></th>
+                    <th><input type="number" id="mega" name="mega"></th>
+                </tr>
+                <tr>
+                    <th><label for="rs">Rising Star:</label></th>
+                    <th><input type="number" id="rs" name="rs"></th>
+                    <th><label for="rsduo">Rising Star Duo:</label></th>
+                    <th><input type="number" id="rsduo" name="rsduo"></th>
+                    <th><label for="triathlete">Triathlete:</label></th>
+                    <th><input type="number" id="triathlete" name="triathlete"></th>
+                    <th><label for="picnicker">Picnicker:</label></th>
+                    <th><input type="number" id="picnicker" name="picnicker"></th>
+                </tr>
+                <tr>
+                    <th><label for="kalos">Kalos:</label></th>
+                    <th><input type="number" id="kalos" name="kalos"></th>
+                    <th><label for="friendfinder">Friend Finder:</label></th>
+                    <th><input type="number" id="friendfinder" name="friendfinder"></th>
+                    <th><label for="raidexpert">Raid Expert:</label></th>
+                    <th><input type="number" id="raidexpert" name="raidexpert"></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr><th><br></th></tr>
+                <tr><th><h3>Type Medals:</h3></th></tr>
+                
+                <tr>
+                    <th><label for="schoolkid">Schoolkid:</label></th>
+                    <th><input type="number" id="schoolkid" name="schoolkid"></th>
+                    <th><label for="blackbelt">Black Belt:</label></th>
+                    <th><input type="number" id="blackbelt" name="blackbelt"></th>
+                    <th><label for="birdkeeper">Bird Keeper:</label></th>
+                    <th><input type="number" id="birdkeeper" name="birdkeeper"></th>
+                    <th><label for="punkgirl">Punk Girl:</label></th>
+                    <th><input type="number" id="punkgirl" name="punkgirl"></th>
+                </tr>
+                <tr>
+                    <th><label for="ruinmaniac">Ruin Maniac:</label></th>
+                    <th><input type="number" id="ruinmaniac" name="ruinmaniac"></th>
+                    <th><label for="hiker">Hiker:</label></th>
+                    <th><input type="number" id="hiker" name="hiker"></th>
+                    <th><label for="bugcatcher">Bug Catcher:</label></th>
+                    <th><input type="number" id="bugcatcher" name="bugcatcher"></th>
+                    <th><label for="hexmaniac">Hex Maniac:</label></th>
+                    <th><input type="number" id="hexmaniac" name="hexmaniac"></th>
+                </tr>
+                <tr>
+                    <th><label for="railstaff">Rail Staff:</label></th>
+                    <th><input type="number" id="railstaff" name="railstaff"></th>
+                    <th><label for="kindler">Kindler:</label></th>
+                    <th><input type="number" id="kindler" name="kindler"></th>
+                    <th><label for="swimmer">Swimmer:</label></th>
+                    <th><input type="number" id="swimmer" name="swimmer"></th>
+                    <th><label for="gardener">Gardener:</label></th>
+                    <th><input type="number" id="gardener" name="gardener"></th>
+                </tr>
+                <tr>
+                    <th><label for="rocker">Rocker:</label></th>
+                    <th><input type="number" id="rocker" name="rocker"></th>
+                    <th><label for="psychic">Psychic:</label></th>
+                    <th><input type="number" id="psychic" name="psychic"></th>
+                    <th><label for="skier">Skier:</label></th>
+                    <th><input type="number" id="skier" name="skier"></th>
+                    <th><label for="dragontamer">Dragon Tamer:</label></th>
+                    <th><input type="number" id="dragontamer" name="dragontamer"></th>
+                </tr>
+                <tr>
+                    <th><label for="delinquent">Delinquent:</label></th>
+                    <th><input type="number" id="delinquent" name="delinquent"></th>
+                    <th><label for="fairytail">Fairy Tail Girl:</label></th>
+                    <th><input type="number" id="fairytail" name="fairytail"></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                <!--
+                <tr><th><br></th></tr>
+                <tr><th><h3>Event Medals:</h3></th>
+
+                <tr>
+                    <th><input type="checkbox" id="gofest2017" name="gofest2017" value="gofest2017"></th>
+                    <th><label for="gofest2017">Pokémon GO Fest 2017</label></th>
+                    <th><input type="checkbox" id="pikaoutbreak2017" name="pikaoutbreak2017" value="pikaoutbreak2017"></th>
+                    <th><label for="pikaoutbreak2017">Pikachu Outbreak 2017</label></th>
+                    <th><input type="checkbox" id="sz_eu_sep2017" name="sz_eu_sep2017" value="sz_eu_sep2017"></th>
+                    <th><label for="sz_eu_sep2017">Pokémon GO Safari Zone - Europe 2017<br>(France, Spain & Germany, September 16, 2017)</label></th>
+                    <th><input type="checkbox" id="sz_eu_oct2017a" name="sz_eu_oct2017a" value="sz_eu_oct2017a"></th>
+                    <th><label for="sz_eu_oct2017a">Pokémon GO Safari Zone - Europe 2017<br>(Czech Republic & Denmark, October 7, 2017)</label></th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="sz_eu_sep2017b" name="sz_eu_sep2017b" value="sz_eu_sep2017b"></th>
+                    <th><label for="sz_eu_sep2017b">Pokémon GO Safari Zone - Europe 2017<br>(Sweden, October 14, 2017)</label></th>
+                    <th><input type="checkbox" id="gofest2018" name="gofest2018" value="gofest2018"></th>
+                    <th><label for="gofest2018">Pokémon GO Fest 2018</label></th>
+                    <th><input type="checkbox" id="sw_jap_2018" name="sw_jap_2018" value="sw_jap_2018"></th>
+                    <th><label for="sw_jap_2018">Special Weekend in Japan 2018</label></th>
+                    <th><input type="checkbox" id="sw_korea_2018" name="sw_korea_2018" value="sw_korea_2018"></th>
+                    <th><label for="sw_korea_2018">Special Weekend in South Korea 2018</label></th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="sw_jap_2019a" name="sw_jap_2019a" value="sw_jap_2019a"></th>
+                    <th><label for="sw_jap_2019a">Special Weekend in Japan 2019<br>(Japan, February 23, 2019)</label></th>
+                    <th><input type="checkbox" id="sw_jap_2019b" name="sw_jap_2019b" value="sw_jap_2019b"></th>
+                    <th><label for="sw_jap_2019b">Special Weekend in Japan 2019<br>(Japan, April 6-7, 2019)</label></th>
+                    <th><input type="checkbox" id="sz_yokosuka" name="sz_yokosuka" value="sz_yokosuka"></th>
+                    <th><label for="sz_yokosuka">Safari Zone Yokosuka</label></th>
+                    <th><input type="checkbox" id="sz_montreal" name="sz_montreal" value="sz_montreal"></th>
+                    <th><label for="sz_montreal">Safari Zone Montreal</label></th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="sz_stlouis" name="sz_stlouis" value="sz_stlouis"></th>
+                    <th><label for="sz_stlouis">Safari Zone St Louis</label></th>
+                    <th><input type="checkbox" id="sz_liverpool" name="sz_liverpool" value="sz_liverpool"></th>
+                    <th><label for="sz_liverpool">Safari Zone Liverpool</label></th>
+                    <th><input type="checkbox" id="sz_philadelphia" name="sz_philadelphia" value="sz_philadelphia"></th>
+                    <th><label for="sz_philadelphia">Safari Zone Philadelphia</label></th>
+                    <th><input type="checkbox" id="cx_liverpool" name="cx_liverpool" value="cx_liverpool"></th>
+                    <th><label for="cx_liverpool">City Explorer Pass<br>(Safari Zone Liverpool)</label></th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="cx_philadelphia" name="cx_philadelphia" value="cx_philadelphia"></th>
+                    <th><label for="cx_philadelphia">City Explorer Pass<br>(Safari Zone Philadelphia)</label></th>
+                    <th><input type="checkbox" id="gofest_2020" name="gofest_2020" value="gofest_2020"></th>
+                    <th><label for="gofest_2020">Pokémon GO Fest 2020</label></th>
+                    <th><input type="checkbox" id="spotlight2020a" name="spotlight2020a" value="spotlight2020a"></th>
+                    <th><label for="spotlight2020a">City Spotlight 2020<br>(Busan, Korea)</label></th>
+                    <th><input type="checkbox" id="spotlight2020b" name="spotlight2020b" value="spotlight2020b"></th>
+                    <th><label for="spotlight2020b">City Spotlight 2020<br>(Auckland, New Zealand)</label></th>                
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="spotlight2020c" name="spotlight2020c" value="spotlight2020c"></th>
+                    <th><label for="spotlight2020c">City Spotlight 2020<br>(Tainan, Taiwan)</label></th>                
+                    <th><input type="checkbox" id="kanto_red" name="kanto_red" value="kanto_red"></th>
+                    <th><label for="kanto_red">Pokémon GO Tour: Kanto - Red</label></th>
+                    <th><input type="checkbox" id="kanto_green" name="kanto_green" value="kanto_green"></th>
+                    <th><label for="kanto_green">Pokémon GO Tour: Kanto - Green</label></th>
+                    <th><input type="checkbox" id="gofest2021" name="gofest2021" value="gofest2021"></th>
+                    <th><label for="gofest2021">Pokémon GO Fest 2021</label></th>                
+                </tr>
+
+                <tr><th><br></th></tr>
+                <tr><th><h3>In-Game Event Medals:</h3></th>
+                <tr>
+                    <th><input type="checkbox" id="c_discovery" name="c_discovery" value="c_discovery"></th>
+                    <th><label for="c_discovery">A Colossal Discovery</label></th>                
+                    <th><input type="checkbox" id="d_investigate" name="d_investigate" value="d_investigate"></th>
+                    <th><label for="d_investigate">A Drive to Investigate</label></th>
+                    <th><input type="checkbox" id="i_illusions" name="i_illusions" value="i_illusions"></th>
+                    <th><label for="i_illusions">Investigating Illusions</label></th>
+                    <th><input type="checkbox" id="t_tap" name="t_tap" value="t_tap"></th>
+                    <th><label for="t_tap">Tap... Tap... Tappity-Tap...</label></th>                
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="sw_2020" name="sw_2020" value="sw_2020"></th>
+                    <th><label for="sw_2020">Special Weekend (2020)</label></th>                
+                    <th><input type="checkbox" id="sw_2021" name="sw_2021" value="sw_2021"></th>
+                    <th><label for="sw_2021">Special Weekend (2021)</label></th>
+                    <th><input type="checkbox" id="level40" name="level40" value="level40"></th>
+                    <th><label for="level40">Legacy 40</label></th>
+                    <th><input type="checkbox" id="tcg1" name="tcg1" value="tcg1"></th>
+                    <th><label for="tcg1">Trading Card</label></th>                
+                </tr>
+                -->
+            </table>
+
+            <!--
+            <table>
+                <tr><th><br></th></tr>
+                
+                <tr><th><h3>Elite Collection Challenges:</h3></th>
+
+                <tr><th><input type="checkbox" id="fifth_anniversary" name="fifth_anniversary" value="fifth_anniversary">
+                <label for="fifth_anniversary">Fifth-Anniversary Collection</label>
+                <tr><th><input type="checkbox" id="slow_discovery" name="slow_discovery" value="slow_discovery">
+                <label for="slow_discovery">A Very Slow Discovery Challenge</label></th></tr>
+                <tr><th><input type="checkbox" id="friendship_day" name="friendship_day" value="friendship_day">
+                <label for="friendship_day">Friendship Day Collection Challenge</label></th></tr>
+                <tr><th><input type="checkbox" id="spring2021" name="spring2021" value="spring2021">
+                <label for="spring2021">Spring into Spring 2021 Collection</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_league" name="kanto_league" value="kanto_league">
+                <label for="kanto_league">GO Tour Kanto: Pokémon League</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_fuchsia" name="kanto_fuchsia" value="kanto_fuchsia">
+                <label for="kanto_fuchsia">GO Tour Kanto: Fuchsia City</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_cerulean" name="kanto_cerulean" value="kanto_cerulean">
+                <label for="kanto_cerulean">GO Tour Kanto: Cerulean City</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_pewter" name="kanto_pewter" value="kanto_pewter">
+                <label for="kanto_pewter">GO Tour Kanto: Pewter City</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_pallet" name="kanto_pallet" value="kanto_pallet">
+                <label for="kanto_pallet">GO Tour Kanto: Pallet Town</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_raid" name="kanto_raid" value="kanto_raid">
+                <label for="kanto_raid">GO Tour Kanto: Raid</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_research" name="kanto_research" value="kanto_research">
+                <label for="kanto_research">GO Tour Kanto: Research</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_evolve" name="kanto_evolve" value="kanto_evolve">
+                <label for="kanto_evolve">GO Tour Kanto: Evolve</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_green_trade" name="kanto_green_trade" value="kanto_green_trade">
+                <label for="kanto_green_trade">GO Tour Kanto: Green Version (Trade)</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_green_incense" name="kanto_green_incense" value="kanto_green_incense">
+                <label for="kanto_green_incense">GO Tour Kanto: Green Version (Incense)</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_red_trade" name="kanto_red_trade" value="kanto_red_trade">
+                <label for="kanto_red_trade">GO Tour Kanto: Red Version (Trade)</label></th></tr>
+                <tr><th><input type="checkbox" id="kanto_red_incense" name="kanto_red_incense" value="kanto_red_incense">
+                <label for="kanto_red_incense">GO Tour Kanto: Red Version (Incense)</label></th></tr>
+                <tr><th><input type="checkbox" id="valentines2021" name="valentines2021" value="valentines2021">
+                <label for="valentines2021">Valentine's Day 2021 Collection</label></th></tr>
+                <tr><th><input type="checkbox" id="johto_collection" name="johto_collection" value="johto_collection">
+                <label for="johto_collection">Johto Collection Challenge</label></th></tr>
+                <tr><th><input type="checkbox" id="hoenn_collection" name="hoenn_collection" value="hoenn_collection">
+                <label for="hoenn_collection">Hoenn Collection Challenge</label></th></tr>
+                <tr><th><input type="checkbox" id="sinnoh_collection" name="sinnoh_collection" value="sinnoh_collection">
+                <label for="sinnoh_collection">Sinnoh Collection Challenge</label></th></tr>
+                <tr><th><input type="checkbox" id="unova_collection" name="unova_collection" value="unova_collection">
+                <label for="unova_collection">Unova Collection Challenge</label></th></tr>
+            </table>
+            -->
+            <br>
+            <div class="buttonHolder"><input type="submit"></div>
+            
+        </form>
+    </body>
+
+</html>
